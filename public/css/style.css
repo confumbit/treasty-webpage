@@ -19,7 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../Images/bg.png");
+  background-image: url("../images/bg.png");
   background-repeat: repeat;
   background-size: 508px;
   background-color: rgb(255, 210, 49);
@@ -102,7 +102,7 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 200px;
-  background-image: url("../Images/bg.png");
+  background-image: url("../images/bg.png");
   background-repeat: repeat;
   background-size: 500px;
   background-color: rgb(255, 210, 49);
@@ -168,7 +168,7 @@ body {
   height: 70px;
   width: 100vw;
   padding-top: 50px;
-  background-image: url("../Images/bg.png");
+  background-image: url("../images/bg.png");
   background-repeat: repeat;
   background-size: 500px;
   background-color: rgb(255, 210, 49);
