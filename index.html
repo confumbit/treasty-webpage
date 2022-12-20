@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasty | Social Gateway</title>
+    <link rel="shortcut icon" href="images\favicon.png"></link>
+    <link rel="stylesheet" href="css\style.css">
+    <meta name="description" content="Treasty is a place where you will get different varieties of foods from different parts of India. It will tingle all your taste buds sweet, salt, spicy, sour. 😋">
+    <meta property="og:image" content="images\logo.png">
+    <meta property="og:description" content="Treasty is a place where you will get different varieties of foods from different parts of India. It will tingle all your taste buds sweet, salt, spicy, sour. 😋">
+    <meta property="og:title" content="Treasty Social Gateway">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="images\logo.png">
+    <meta name="twitter:description" content="Treasty is a place where you will get different varieties of foods from different parts of India. It will tingle all your taste buds sweet, salt, spicy, sour. 😋">
+    <meta name="twitter:title" content="Treasty Social Gateway">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQDPWC3SZB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JQDPWC3SZB');
+    </script>
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="nav">
+        <a href="/"><img src="images\logo_text.png" alt="Treasty"></a>
+    </div>
+
+    <!-- contact us -->
+    <div class="buy">
+        <span class="buy-text">Send us your order on WhatsApp!</span>
+        <a href="https://wa.me/919985278137" target="blank"><button class="buy-button">Order Now</button></a>
+    </div>
+
+    <!-- products title -->
+    <span class="title">Our Products</span>
+
+    <!-- products -->
+    <div class="product-display"></div>
+
+    <!-- midbar -->
+    <div class="buy mid">
+        <span class="mid-text">Look at all the products and prices in one glance.</span>
+        <a href="./products.html" target="blank"><button class="mid-button">Price List</button></a>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+            <a href="https://www.facebook.com/treastyt" class="icon" title="Facebook"><img src="images\facebook.svg" alt="facebook" class="icon"></a>
+            <a href="https://www.instagram.com/treas.ty/" class="icon" title="Instagram"><img src="images\instagram.svg" alt="instagram" class="icon"></a>
+            <a href="https://wa.me/919985278137" class="icon" title="WhatsApp"><img src="images\whatsapp.svg" alt="whatsapp" class="icon"></a>
+            <a href="tel:919985278137" class="icon" title="Call Us"><img src="images\call.svg" alt="call" class="icon"></a>
+            <a href="https://goo.gl/maps/PvQuxiKJuXv1QZGL7" class="icon" title="Location of our Shop"><img src="images\location.svg" alt="call" class="icon"></a>
+    </div>
+</body>
+
+<script>
+	products = [
+        {
+            name: "Gulkand",
+            size: "400 g / 800 g",
+            cost: "₹137.00 / ₹237.00",
+            src: "gulkand_g.png",
+        },
+        {
+            name: "Tal Mishri",
+            size: "1 kg / 500 g",
+            cost: "₹140.00 / ₹85.00",
+            src: "tal_mishri_g.png",
+        },
+        {
+            name: "Rose Water",
+            size: "550 mL / 200 mL",
+            cost: "₹270.00 / ₹145.00",
+            src: "rose_water_g.png",
+        },
+        {
+            name: "Rose Sharbat",
+            size: "700 mL / 250 mL",
+            cost: "₹285.00 / ₹145.00",
+            src:  "rose_sharbat_g.png",
+        },
+        {
+            name: "Khus Sharbat",
+            size: "700 mL / 250 mL",
+            cost: "₹285.00 / ₹145.00",
+            src: "khus_sharbat_g.png",
+        },
+        {
+            name: "Paan Sharbat",
+            size: "700 mL / 250 mL",
+            cost: "₹285.00 / ₹145.00",
+            src: "paan_sharbat_g.png",
+        },
+        {
+            name: "Chandan Sharbat",
+            size: "700 mL / 250 mL",
+            cost: "₹285.00 / ₹145.00",
+            src: "chandan_sharbat_g.png",
+        },
+        {
+            name: "Saunf Sharbat",
+            size: "700 mL / 250 mL",
+            cost: "₹285.00 / ₹145.00",
+            src: "saunf_sharbat_g.png",
+        },
+        {
+            name: "Gulkand Thandai",
+            size: "700 mL / 250 mL",
+            cost: "₹490.00 / ₹215.00",
+            src: "gulkand_thandai_g.png",
+        },
+        {
+            name: "Sharbat Gift Pack",
+            size: "250 mL * 3",
+            cost: "₹435.00",
+            src: "gift_pack_g.png",
+        },
+        {
+            name: "Paani ka Achaar",
+            size: "500 g",
+            cost: "₹175.00",
+            src: "paani_ka_aachar_g.png",
+        },
+	];
+
+    products.forEach(product => {
+        const productDisplay = document.querySelector(".product-display");
+
+
+        const productCard = document.createElement("div");
+        productCard.className = "product-card";
+        productDisplay.appendChild(productCard);
+        
+
+        const productImage = document.createElement("div");
+        productImage.className = "product-image";
+        productCard.appendChild(productImage);
+
+        const image = document.createElement("img");
+        image.src = "images/" + product.src;
+        image.alt = product.name;
+        productImage.appendChild(image);
+
+
+        const productDetails = document.createElement("div");
+        productDetails.class;
+        productDetails.className = "product-details";
+        productCard.appendChild(productDetails);
+
+        const productTitle = document.createElement("span")
+        productTitle.className = "product-title";
+        productTitle.innerText = product.name.toUpperCase();
+        productDetails.appendChild(productTitle);
+
+        const productSize = document.createElement("span")
+        productSize.className = "product-size";
+        productSize.innerText = product.size;
+        productDetails.appendChild(productSize);
+
+        const productCost = document.createElement("span")
+        productCost.className = "product-cost";
+        productCost.innerText = product.cost;
+        productDetails.appendChild(productCost);
+
+        console.log("Added", product.name);
+        console.table(product);
+    });
+</script>
+</html>
